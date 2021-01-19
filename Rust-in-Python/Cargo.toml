@@ -1,0 +1,13 @@
+[package]
+name = "rust-in-python"
+version = "0.1.0"
+authors = ["Tiago Cavalcante Trindade <tiagotrindade111@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "square"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.13.1"
+features = ["extension-module"]

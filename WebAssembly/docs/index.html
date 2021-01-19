@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>My Wasm Project</title>
+</head>
+
+<body>
+	<input id='number' type='number' />
+	<button id='button'>Calculate square</button>
+	<span id='square'>0</span>
+
+	<script type='module'>
+		import init, { square } from './webassembly.js';
+
+		init();
+
+		document.getElementById('button').addEventListener('click', () => {
+			document.getElementById('square').innerText = square(
+				parseInt(document.getElementById('number').value)
+			);
+		});
+	</script>
+</body>
+
+</html>
